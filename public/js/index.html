@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: rgb(64, 54, 73);
+      }
+      #submit {
+        margin-left: auto;
+      }
+      table,
+      th,
+      td {
+        border-collapse: collapse;
+        border: 1px solid;
+        width: 100vw;
+        height: 5vh;
+        text-align: center;
+      }
+      form {
+        width: 100%;
+        padding-left: 50px;
+        height: 38vh;
+        border: 1px solid;
+      }
+      h2 {
+        text-align: center;
+        margin: 0;
+        margin-top: 20px;
+      }
+
+      input {
+        display: block;
+      }
+      .postForm,
+      .putForm,
+      .deleteForm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90vw;
+        height: 35vh;
+        margin: 2.5rem;
+      }
+      thead > tr {
+        background-color: rgb(67, 114, 33);
+      }
+      .tablebody:nth-child(2n) {
+        background-color: aliceblue;
+      }
+      .tablebody:nth-child(2n + 1) {
+        background-color: beige;
+      }
+      form:nth-child(2n) {
+        background-color: beige;
+        height: 20vh;
+      }
+      form:nth-child(2n + 1) {
+        background-color: aliceblue;
+      }
+      button {
+        margin-top: 5px;
+      }
+      #deleteForm {
+        height: 25vh;
+        background-color: beige;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <button id="submit">Get Data</button>
+      <div class="table">
+        <table>
+          <thead>
+            <th>id</th>
+            <th>model</th>
+            <th>color</th>
+            <th>price</th>
+          </thead>
+          <tbody id="target"></tbody>
+        </table>
+      </div>
+      <div class="postForm">
+        <form id="postForm">
+          <h2>Insert item</h2>
+          <label for="id">id</label>
+          <input type="number" id="id" required />
+          <label for="model">model</label>
+          <input type="text" id="model" required />
+          <label for="color">color</label>
+          <input type="text" id="color" required />
+          <label for="price">price</label>
+          <input type="number" id="price" required />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="deleteForm">
+        <form id="deleteForm">
+          <h2>Delete Item</h2>
+          <label for="id1">id</label>
+          <input type="text" id="id1" required />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="putForm">
+        <form id="putForm">
+          <h2>Update Item</h2>
+          <label for="id2">id</label>
+          <input type="number" id="id2" required />
+          <label for="model2">model</label>
+          <input type="text" id="model2" required />
+          <label for="color2">color</label>
+          <input type="text" id="color2" required />
+          <label for="price2">price</label>
+          <input type="number" id="price2" required />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
