@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       body {
-        background-color: rgb(64, 54, 73);
+        background: url(../../public/3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-size: 1rem;
       }
       #submit {
         margin-left: auto;
@@ -23,8 +26,7 @@
       form {
         width: 100%;
         padding-left: 50px;
-        height: 38vh;
-        border: 1px solid;
+        height: 40vh;
       }
       h2 {
         text-align: center;
@@ -36,14 +38,18 @@
         display: block;
       }
       .postForm,
-      .putForm,
-      .deleteForm {
+      .putForm {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 90vw;
-        height: 35vh;
+        height: 45vh;
         margin: 2.5rem;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
       }
       thead > tr {
         background-color: rgb(67, 114, 33);
@@ -54,19 +60,37 @@
       .tablebody:nth-child(2n + 1) {
         background-color: beige;
       }
-      form:nth-child(2n) {
-        background-color: beige;
+      /* form:nth-child(2n) {
+        background-color: hsl(60, 56%, 91%);
         height: 20vh;
       }
       form:nth-child(2n + 1) {
-        background-color: aliceblue;
-      }
+        background-color: hsl(208, 100%, 97%);
+      } */
       button {
-        margin-top: 5px;
+        padding: 5px;
+        margin-top: 7px;
+        border-radius: 10px;
+        background-color: blue;
+        color: whitesmoke;
+      }
+      .deleteForm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90vw;
+        margin: 2.5rem;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
       }
       #deleteForm {
         height: 25vh;
-        background-color: beige;
+      }
+      button:hover {
+        cursor: pointer;
       }
     </style>
   </head>
@@ -87,7 +111,7 @@
       </div>
       <div class="postForm">
         <form id="postForm">
-          <h2>Insert item</h2>
+          <h2>Insert Car into Database</h2>
           <label for="id">id</label>
           <input type="number" id="id" required />
           <label for="model">model</label>
@@ -101,7 +125,7 @@
       </div>
       <div class="deleteForm">
         <form id="deleteForm">
-          <h2>Delete Item</h2>
+          <h2>Delete Car from Database</h2>
           <label for="id1">id</label>
           <input type="text" id="id1" required />
           <button type="submit">Submit</button>
@@ -109,7 +133,7 @@
       </div>
       <div class="putForm">
         <form id="putForm">
-          <h2>Update Item</h2>
+          <h2>Update Car from Database</h2>
           <label for="id2">id</label>
           <input type="number" id="id2" required />
           <label for="model2">model</label>

@@ -16,10 +16,6 @@ app.use(express.static(static_path));
 app.use(express.static("public/js"));
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/js/index.html");
-});
-
 // Handling GET request
 
 app.get("/cars", (req, res) => {
