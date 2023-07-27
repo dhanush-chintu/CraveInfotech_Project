@@ -1,8 +1,8 @@
 [
-  { "model": "xuv700", "color": "blue", "price": 2800000, "id": 1 },
-  { "model": "verna", "color": "grey", "price": 1300000, "id": 2 },
-  { "model": "thar", "color": "red", "price": 1700000, "id": 3 },
-  { "model": "Pagani", "color": "white", "price": "17600000", "id": "4" },
-  { "id": "5", "model": "Bugati", "color": "green", "price": "29462048" },
-  { "id": "6", "model": "Toyota", "color": "red", "price": "89245" }
+  { "id": 1, "model": "xuv700", "color": "blue", "price": 2800000 },
+  { "id": 2, "model": "verna", "color": "grey", "price": 1300000 },
+  { "id": 3, "model": "thar", "color": "red", "price": 1700000 },
+  { "id": 4, "model": "Pagani", "color": "white", "price": 17600000 },
+  { "id": 5, "model": "Innova", "color": "Blue", "price": 8000000 },
+  { "id": 6, "model": "Dassault", "color": "Blue", "price": 8000000 }
 ]

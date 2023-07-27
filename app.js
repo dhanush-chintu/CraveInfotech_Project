@@ -27,10 +27,10 @@ app.get("/cars", (req, res) => {
 app.post("/cars", upload.none(), (req, res) => {
   console.log(req.body);
   let obj = {
-    id: req.body.id,
+    id: parseInt(req.body.id),
     model: req.body.model,
     color: req.body.color,
-    price: req.body.price,
+    price: parseInt(req.body.price),
   };
   cars.push(obj);
   const jsonString = JSON.stringify(cars);
@@ -79,10 +79,10 @@ app.delete("/cars/:id", (req, res) => {
 // Handling PUT request
 app.post("/cars/update", (req, res) => {
   let obj = {
-    id: req.body.id,
+    id: parseInt(req.body.id),
     model: req.body.model,
     color: req.body.color,
-    price: req.body.price,
+    price: parseInt(req.body.price),
   };
   let id = req.body.id;
   let changable = cars.find((o) => o.id == id);
@@ -102,13 +102,14 @@ app.post("/cars/update", (req, res) => {
 
 app.put("/cars/update/:id", upload.none(), (req, res) => {
   let obj = {
-    id: req.body.id,
+    id: parseInt(req.body.id),
     model: req.body.model,
     color: req.body.color,
-    price: req.body.price,
+    price: parseInt(req.body.price),
   };
-  let id = req.params.id;
+  let id = parseInt(req.params.id);
   let changable = cars.find((o) => o.id == id);
+  changable.id = obj.id;
   changable.model = obj.model;
   changable.color = obj.color;
   changable.price = obj.price;
